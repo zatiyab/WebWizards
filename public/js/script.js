@@ -310,3 +310,17 @@ window.addEventListener('click', (e) => {
     modal.classList.remove('show');
   }
 });
+
+
+ // Add event listener to hamburger-list
+ document.querySelector(".hamburger").addEventListener("click", () => {
+  const navRight = document.querySelector(".nav-link");
+  // Check if the nav-right menu is visible
+  if (navRight.style.top === "-500%") {
+      // Close the menu
+      navRight.style.top = "65px";
+  } else {
+      // Open the menu
+      navRight.style.top = "-500%";
+  }
+});

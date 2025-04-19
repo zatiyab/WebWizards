@@ -21,41 +21,36 @@
     <div class="container">
       <!-- Logo -->
       <a class="navbar-brand fw-bold fs-3" href="#">
-        <img src="/public/images/alumni-logo-footer.png" alt="">Alumni Portal</a>
+        <img src="/public/images/alumni-logo-footer.png" alt="" style="height: 30px;"> Alumni Portal
+      </a>
 
-      <!-- Toggler -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <!-- Custom Hamburger Button -->
+      <!-- <button class="navbar-toggler border-0" type="button" id="hamburgerBtn">
+        <img src="/public/images/hamburger.svg" alt="Menu" class="hamburger-icon">
+      </button> -->
 
-      <!-- Nav Links -->
+      <!-- Nav Links + Buttons -->
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav gap-4">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Events</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Alumni</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Alumni</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
         </ul>
-      </div>
 
-      <!-- Right Buttons -->
-      <div class="d-flex ms-auto gap-2">
-        <button type="button" class="btn btn-primary btn-sm rounded-pill px-4 py-2">Sign In</button>
-        <button type="button" class="btn btn-outline-primary btn-sm rounded-pill px-4 py-2">Sign Up</button>
+        <div class="d-flex flex-column flex-lg-row gap-2 mt-3 mt-lg-0 ms-lg-3">
+          <button class="btn btn-primary btn-sm rounded-pill px-4 py-2">Sign In</button>
+          <button class="btn btn-outline-primary btn-sm rounded-pill px-4 py-2">Sign Up</button>
+        </div>
       </div>
+    </div>
+    <div class="hamburger">
+      <img src="/public/images/hamburger.svg" alt="">
     </div>
   </nav>
 
-
   <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 
@@ -179,7 +174,7 @@
       <div class="footer-logo">
         <img src="/public/images/alumni-logo-footer.png" alt="Alumni Portal Logo">
       </div>
-  
+
       <!-- Navigation Links -->
       <ul class="footer-nav">
         <li><a class="footer-link" href="#">Home</a></li>
@@ -188,14 +183,14 @@
         <li><a class="footer-link" href="#">Contact</a></li>
       </ul>
     </div>
-  
+
     <!-- Copyright -->
     <div class="footer-copy">
       &copy; 2025 Alumni Portal. All rights reserved.
     </div>
   </footer>
-  
-  
+
+
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

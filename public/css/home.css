@@ -13,6 +13,7 @@ body {
 /* nav-bar */
 .navbar {
   background-color: #f9f9f9;
+  position: relative;
 }
 
 /* Smooth transitions for nav links and buttons */
@@ -51,9 +52,11 @@ body {
   transition: all 0.3s ease;
   color: #222 !important;
   display: flex;
+  align-items: center;
   gap: 10px;
 }
-.navbar-brand img{
+
+.navbar-brand img {
   width: 40px;
 }
 
@@ -366,6 +369,7 @@ body {
 
 .about-text ul {
   list-style: none;
+  text-align: start;
 }
 
 .about-text ul li {
@@ -401,6 +405,55 @@ body {
   .about {
     flex-direction: column;
     text-align: center;
+    padding: 3;
+    margin: 0px 10%;
+  }
+  .about-image{
+    margin: 34px 0px;
+  }
+
+  .main-heading {
+    margin-bottom: 0px;
+    font-weight: 100;
+    text-align: start;
+  }
+
+  .about-text h2 {
+    text-align: left;
+    font-size: 1.5rem;
+  }
+
+  /* .hamburger {
+    display: block;
+  } */
+
+  .container,
+  .container-md,
+  .container-sm {
+    max-width: 100%;
+  }
+}
+
+/* for small devices */
+@media (max-width: 480px) {
+  .alumni-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    max-width: 446px;
+    margin: 0 auto;
+  }
+  .about-image{
+    margin: 34px 0px;
+  }
+}
+
+
+@media (min-width: 576px) {
+
+  .container,
+  .container-sm {
+    max-width: 100%;
   }
 }
 
@@ -479,4 +532,9 @@ body {
   margin-top: 5px;
   padding-top: 10px;
   border-top: 1px solid #eaeaea;
+}
+
+/* hamburger */
+.hamburger {
+  display: none;
 }
