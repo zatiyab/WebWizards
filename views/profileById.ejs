@@ -16,7 +16,7 @@
     <%- include('partials/sidebar') %>
         <div class="col-md-9 col-lg-10 content">
             <div class="profile-container">
-                <img src="/images/ali-photo.jpg" alt="Profile Picture" class="profile-pic">
+                <img src="<%= user.profile_image_url %>" alt="Profile Picture" class="profile-pic">
 
                 <h1>
                     <%= user.name %>
