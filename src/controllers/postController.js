@@ -52,7 +52,7 @@ const getDashboardPosts = async (req, res) => {
             branch,
             company,
             profile_image_url
-        } = curr_user_data
+        } = curr_user_data[0]
 
         res.render("dashboard.ejs", {
             name: name,
