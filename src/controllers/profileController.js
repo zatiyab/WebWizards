@@ -30,6 +30,10 @@ const getDirectory = async (req, res) => {
     }
 };
 
+const getEditProfile = async (req, res) => {
+    res.render('editProfile.ejs')
+}
+
 const editProfile = async (req, res) => {
     try {
         data = req.body
@@ -43,8 +47,10 @@ const editProfile = async (req, res) => {
 
 }
 
+
 module.exports = {
     getProfile,
     getDirectory,
+    getEditProfile,
     editProfile
 }; 
