@@ -33,7 +33,6 @@ const getDashboardPosts = async (req, res) => {
         const result = await db.query("SELECT * FROM posts,users WHERE posts.user_id = users.user_id");
         const posts_users = result.rows.reverse();
         const user_id = req.session.user.user_id;
-        const name = req.session.user.name;
         let img;
         let curr_user_data;
         console.log(posts_users)
@@ -44,9 +43,25 @@ const getDashboardPosts = async (req, res) => {
                 break
             }
         }
-
+        const {
+            name,
+            batch,
+            job_title,
+            location,
+            branch,
+            company,
+            profile_image_url
+        } = curr_user_data
         console.log(img)
-        res.render("dashboard.ejs", { name: name, img: img, posts: posts_users });
+        res.render("dashboard.ejs", {
+            name: name,
+            img: profile_image_url,
+            batch: batch,
+            job: job_title,
+            location: location,
+            branch: branch,
+            posts: posts_users
+        });
     } catch (error) {
         console.error('Error fetching dashboard posts:', error);
         res.status(500).send('Error fetching dashboard posts');
