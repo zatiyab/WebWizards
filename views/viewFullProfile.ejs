@@ -20,13 +20,22 @@
             <div class="col-md-9 col-lg-10 content">
                 <div class="profile-header">
                     <div class="profile-basic">
-                        <img src="/api/placeholder/150/150" alt="Zara Sheikh" class="profile-picture">
+                        <img src="<%= data[0].profile_image_url %>" alt="Zara Sheikh" class="profile-picture">
                         <div class="profile-info">
-                            <h1>Zara Sheikh</h1>
+                            <h1>
+                                <%= data[0].user_name %>
+                            </h1>
                             <div>
-                                <div class="profile-tag">Software Engineer</div>
-                                <div class="profile-tag">CSE 2023</div>
-                                <div class="profile-tag">Delhi</div>
+                                <div class="profile-tag">
+                                    <%= data[0].>
+                                </div>
+                                <div class="profile-tag">
+                                    <%= data[0].branch>
+                                        <%= data[0].batch>
+                                </div>
+                                <div class="profile-tag">
+                                    <%= data[0].user_location>
+                                </div>
                             </div>
                             <div class="profile-actions">
                                 <a href="/edit-profile"><button class="btn btn-primary">Edit Profile</button></a>
