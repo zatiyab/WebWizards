@@ -10,7 +10,7 @@ router.get('/edit-profile', isAuthenticated, getEditProfile);
 router.post('/edit-profile', isAuthenticated, editProfile);
 
 // Assuming you’re using Express with something like PostgreSQL or MongoDB
-router.get('/alumni/search', isAuthenticated, filterDirectory);
+router.get('/directory/search', isAuthenticated, filterDirectory);
 
 
 module.exports = router; 

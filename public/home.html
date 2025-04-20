@@ -13,50 +13,54 @@
 
 <body>
   <!-- Navbar -->
-<nav class="navbar navbar-expand-lg sticky-top">
-  <div class="container">
-    <!-- Logo -->
-    <a class="navbar-brand fw-bold fs-3" href="#">
-      <img src="./images/alumni-logo-footer.png" alt="Logo">Alumni Portal</a>
-      
-    <!-- Toggler -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-      
-    <!-- Nav Links -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mx-auto gap-4">
-        <li class="nav-item">
-          <a class="nav-link " aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#About">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#Alumni">Alumni</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#Contact">Contact</a>
-        </li>
-      </ul>
-      
-      <!-- Buttons inside the collapsible menu but only on small screens -->
-      <div class="d-lg-none mt-3">
-        <div class="d-flex flex-row gap-2">
-          <a href="/login"><button type="button" class="btn btn-primary btn-sm rounded-pill px-4 py-2">Sign In</button></a>
-          <a href="/signup"><button type="button" class="btn btn-outline-primary btn-sm rounded-pill px-4 py-2">Sign Up</button></a>
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand fw-bold fs-3" href="#">
+        <img src="./images/alumni-logo-footer.png" alt="Logo">Alumni Portal</a>
+
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Nav Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto gap-4">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#About">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Alumni">Alumni</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Contact">Contact</a>
+          </li>
+        </ul>
+
+        <!-- Buttons inside the collapsible menu but only on small screens -->
+        <div class="d-lg-none mt-3">
+          <div class="d-flex flex-row gap-2">
+            <a href="/login"><button type="button" class="btn btn-primary btn-sm rounded-pill px-4 py-2">Sign
+                In</button></a>
+            <a href="/signup"><button type="button" class="btn btn-outline-primary btn-sm rounded-pill px-4 py-2">Sign
+                Up</button></a>
+          </div>
         </div>
       </div>
+
+      <!-- Buttons visible only on large screens -->
+      <div class="d-none d-lg-flex gap-2">
+        <a href="/login"><button type="button" class="btn btn-primary btn-sm rounded-pill px-4 py-2">Sign
+            In</button></a>
+        <a href="/signup"><button type="button" class="btn btn-outline-primary btn-sm rounded-pill px-4 py-2">Sign
+            Up</button></a>
+      </div>
     </div>
-    
-    <!-- Buttons visible only on large screens -->
-    <div class="d-none d-lg-flex gap-2">
-      <a href="/login"><button type="button" class="btn btn-primary btn-sm rounded-pill px-4 py-2">Sign In</button></a>
-      <a href="/signup"><button type="button" class="btn btn-outline-primary btn-sm rounded-pill px-4 py-2">Sign Up</button></a>
-    </div>
-  </div>
-</nav>
+  </nav>
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-overlay"></div>
@@ -116,112 +120,114 @@
 
 
   <!-- Alumni-card section -->
-<section id="Alumni" class="alumni-section">
-  <div class="container">
-    <h2 class="section-heading text-center">Our Alumni</h2>
-    <p class="section-subheading text-center mb-5">Meet our successful graduates who are making a difference</p>
+  <section id="Alumni" class="alumni-section">
+    <div class="container">
+      <h2 class="section-heading text-center">Our Alumni</h2>
+      <p class="section-subheading text-center mb-5">Meet our successful graduates who are making a difference</p>
 
-    <div class="alumni-grid">
-      
-      <!-- card-1 -->
-      <div class="alumni-card">
-        <div class="alumni-image">
-          <img src="./images/alumni-card-img.jpg" alt="John Doe">
-        </div>
-        <div class="alumni-content">
-          <h3>John Doe</h3>
-          <p class="alumni-designation">Software Engineer at Google</p>
-          <div class="alumni-info">
-            <p><i class="fas fa-graduation-cap"></i> <span>Batch: 2010</span></p>
-            <p><i class="fas fa-laptop-code"></i> <span>Computer Science</span></p>
-            <p><i class="fas fa-map-marker-alt"></i> <span>California, USA</span></p>
+      <div class="alumni-grid">
+
+        <!-- card-1 -->
+        <div class="alumni-card">
+          <div class="alumni-image">
+            <img src="./images/alumni-card-img.jpg" alt="John Doe">
           </div>
-          <div class="alumni-social">
-            <a href="https://github.com" target="_blank" class="social-btn github">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-            <a href="https://linkedin.com" target="_blank" class="social-btn linkedin">
-              <i class="fab fa-linkedin-in"></i> LinkedIn
-            </a>
+          <div class="alumni-content">
+            <h3>John Doe</h3>
+            <p class="alumni-designation">Software Engineer at Google</p>
+            <div class="alumni-info">
+              <p><i class="fas fa-graduation-cap"></i> <span>Batch: 2010</span></p>
+              <p><i class="fas fa-laptop-code"></i> <span>Computer Science</span></p>
+              <p><i class="fas fa-map-marker-alt"></i> <span>California, USA</span></p>
+            </div>
+            <div class="alumni-social">
+              <a href="https://github.com" target="_blank" class="social-btn github">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="https://linkedin.com" target="_blank" class="social-btn linkedin">
+                <i class="fab fa-linkedin-in"></i> LinkedIn
+              </a>
+            </div>
           </div>
         </div>
+
+        <!-- card-2 -->
+        <div class="alumni-card">
+          <div class="alumni-image">
+            <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?crop=faces&fit=crop&h=500&w=500"
+              alt="Jane Smith">
+          </div>
+          <div class="alumni-content">
+            <h3>Jane Smith</h3>
+            <p class="alumni-designation">Product Manager at Microsoft</p>
+            <div class="alumni-info">
+              <p><i class="fas fa-graduation-cap"></i> <span>Batch: 2012</span></p>
+              <p><i class="fas fa-laptop-code"></i> <span>IT</span></p>
+              <p><i class="fas fa-map-marker-alt"></i> <span>New York, USA</span></p>
+            </div>
+            <div class="alumni-social">
+              <a href="https://github.com" target="_blank" class="social-btn github">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="https://linkedin.com" target="_blank" class="social-btn linkedin">
+                <i class="fab fa-linkedin-in"></i> LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- card-3 -->
+        <div class="alumni-card">
+          <div class="alumni-image">
+            <img src="./images/alumni-card-img.jpg" alt="Mike Johnson">
+          </div>
+          <div class="alumni-content">
+            <h3>Mike Johnson</h3>
+            <p class="alumni-designation">Cloud Architect at Amazon</p>
+            <div class="alumni-info">
+              <p><i class="fas fa-graduation-cap"></i> <span>Batch: 2015</span></p>
+              <p><i class="fas fa-laptop-code"></i> <span>ECE</span></p>
+              <p><i class="fas fa-map-marker-alt"></i> <span>Seattle, USA</span></p>
+            </div>
+            <div class="alumni-social">
+              <a href="https://github.com" target="_blank" class="social-btn github">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="https://linkedin.com" target="_blank" class="social-btn linkedin">
+                <i class="fab fa-linkedin-in"></i> LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- card-4 -->
+        <div class="alumni-card">
+          <div class="alumni-image">
+            <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?crop=faces&fit=crop&h=500&w=500"
+              alt="Emily Davis">
+          </div>
+          <div class="alumni-content">
+            <h3>Emily Davis</h3>
+            <p class="alumni-designation">Data Scientist at Facebook</p>
+            <div class="alumni-info">
+              <p><i class="fas fa-graduation-cap"></i> <span>Batch: 2018</span></p>
+              <p><i class="fas fa-laptop-code"></i> <span>Data Science</span></p>
+              <p><i class="fas fa-map-marker-alt"></i> <span>San Francisco, USA</span></p>
+            </div>
+            <div class="alumni-social">
+              <a href="https://github.com" target="_blank" class="social-btn github">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="https://linkedin.com" target="_blank" class="social-btn linkedin">
+                <i class="fab fa-linkedin-in"></i> LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+
       </div>
-
-      <!-- card-2 -->
-      <div class="alumni-card">
-        <div class="alumni-image">
-          <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?crop=faces&fit=crop&h=500&w=500" alt="Jane Smith">
-        </div>
-        <div class="alumni-content">
-          <h3>Jane Smith</h3>
-          <p class="alumni-designation">Product Manager at Microsoft</p>
-          <div class="alumni-info">
-            <p><i class="fas fa-graduation-cap"></i> <span>Batch: 2012</span></p>
-            <p><i class="fas fa-laptop-code"></i> <span>IT</span></p>
-            <p><i class="fas fa-map-marker-alt"></i> <span>New York, USA</span></p>
-          </div>
-          <div class="alumni-social">
-            <a href="https://github.com" target="_blank" class="social-btn github">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-            <a href="https://linkedin.com" target="_blank" class="social-btn linkedin">
-              <i class="fab fa-linkedin-in"></i> LinkedIn
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- card-3 -->
-      <div class="alumni-card">
-        <div class="alumni-image">
-          <img src="./images/alumni-card-img.jpg" alt="Mike Johnson">
-        </div>
-        <div class="alumni-content">
-          <h3>Mike Johnson</h3>
-          <p class="alumni-designation">Cloud Architect at Amazon</p>
-          <div class="alumni-info">
-            <p><i class="fas fa-graduation-cap"></i> <span>Batch: 2015</span></p>
-            <p><i class="fas fa-laptop-code"></i> <span>ECE</span></p>
-            <p><i class="fas fa-map-marker-alt"></i> <span>Seattle, USA</span></p>
-          </div>
-          <div class="alumni-social">
-            <a href="https://github.com" target="_blank" class="social-btn github">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-            <a href="https://linkedin.com" target="_blank" class="social-btn linkedin">
-              <i class="fab fa-linkedin-in"></i> LinkedIn
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- card-4 -->
-      <div class="alumni-card">
-        <div class="alumni-image">
-          <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?crop=faces&fit=crop&h=500&w=500" alt="Emily Davis">
-        </div>
-        <div class="alumni-content">
-          <h3>Emily Davis</h3>
-          <p class="alumni-designation">Data Scientist at Facebook</p>
-          <div class="alumni-info">
-            <p><i class="fas fa-graduation-cap"></i> <span>Batch: 2018</span></p>
-            <p><i class="fas fa-laptop-code"></i> <span>Data Science</span></p>
-            <p><i class="fas fa-map-marker-alt"></i> <span>San Francisco, USA</span></p>
-          </div>
-          <div class="alumni-social">
-            <a href="https://github.com" target="_blank" class="social-btn github">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-            <a href="https://linkedin.com" target="_blank" class="social-btn linkedin">
-              <i class="fab fa-linkedin-in"></i> LinkedIn
-            </a>
-          </div>
-        </div>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Contact Section -->
   <!-- Contact Section -->
@@ -278,7 +284,7 @@
           <a href="https://www.instagram.com/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
           <a href="https://www.linkedin.com/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
         </div>
-        
+
       </div>
 
       <!-- Copyright -->
