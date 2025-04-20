@@ -107,7 +107,7 @@ const getProfile = async (req, res) => {
     const user_id = req.session.user.user_id
     console.log(user_id)
     const queryLine = "SELECT u.user_id, u.name AS user_name, u.email AS user_email, u.batch, u.branch, u.company, u.job_title, u.location AS user_location, u.profile_image_url, e.title AS education_title, e.org AS education_organization, e.description AS education_description, e.fromYear AS education_from_year, e.toYear AS education_to_year, we.location AS work_location, we.org AS work_organization, we.position AS work_position, we.description AS work_description, we.fromYear AS work_from_year, we.toYear AS work_to_year FROM users u LEFT JOIN education e ON u.user_id = e.user_id LEFT JOIN work_experience we ON u.user_id = we.user_id WHERE u.user_id = $1;"
-    const result = await db.query(queryLine, user_id)
+    const result = await db.query(queryLine, [user_id])
     console.log(result.rows)
     res.render("viewFullProfile.ejs")
 }

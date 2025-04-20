@@ -42,7 +42,6 @@ const getDashboardPosts = async (req, res) => {
         const user_id = req.session.user.user_id;
         let img;
         let curr_user_data;
-        console.log(posts_users)
         for (const post of posts_users) {
             if (post.user_id === user_id) {
                 curr_user_data = post;
@@ -59,7 +58,7 @@ const getDashboardPosts = async (req, res) => {
             company,
             profile_image_url
         } = curr_user_data
-        console.log(img)
+
         res.render("dashboard.ejs", {
             name: name,
             img: profile_image_url,
