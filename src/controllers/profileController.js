@@ -106,6 +106,7 @@ const filterDirectory = async (req, res) => {
 const getProfile = async (req, res) => {
     const user_id = req.session.user.user_id
     console.log(user_id)
+    // const result = await db.query()
     // const result aw
     res.render("viewFullProfile.ejs")
 }
