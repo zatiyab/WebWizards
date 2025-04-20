@@ -90,12 +90,13 @@ const filterDirectory = async (req, res) => {
         }
 
         const whereClause = conditions.length > 0 ? `WHERE ${conditions.join(' AND ')}` : '';
-        const query = `SELECT * FROM alumni ${whereClause} ORDER BY name ASC`;
 
-        const result = await pool.query(query, values);
+        const query = `SELECT * FROM users ${whereClause} ORDER BY name ASC`;
+
+        const result = await db.query(query, values);
         const users = result.rows;
 
-        res.render('alumni-cards', { users }); // partial to render filtered cards
+        res.render('.\\partials\\alumni-cards.ejs', { users }); // partial to render filtered cards
     } catch (err) {
         console.error(err);
         res.status(500).send('Server Error');

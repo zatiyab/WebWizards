@@ -43,42 +43,9 @@
           </div>
         </div>
       </section>
+      <%- include('partials/alumni-cards') %>
 
-      <main class="container alumni-container" id="alumniContainer">
-        <% for (const user of users) {%>
-          <div class="card">
-            <img src="https://randomuser.me/api/portraits/women/79.jpg" alt="Zoheen Shahzad" class="profile-pic">
-            <h3 class="name">
-              <%= user.name %>
-            </h3>
-            <p class="details"><strong>Batch:</strong>
-              <%= user.batch %>
-            </p>
-            <p class="details"><strong>Branch:</strong>
-              <%= user.branch %>
-            </p>
-            <p class="details"><strong>Company:</strong>
-              <%= user.company %>
-            </p>
-            <p class="details"><strong>Job Title:</strong>
-              <%= user.job_title %>
-            </p>
-            <p class="details"><strong>Location:</strong>
-              <%= user.location %>
-            </p>
-            <div class="links">
-              <a href="https://linkedin.com/in/zoheen" target="_blank" class="connect-btn">LinkedIn</a>
-
-            </div>
-
-            <a href="/profile/<%= user.user_id %>"><button class="btn btn-primary view-profile-btn"
-                data-bs-toggle="modal" data-bs-target="#alumniModal">View Full Profile</button></a>
-          </div>
-          <%} %>
-            <!-- Alumni cards will be injected here -->
-      </main>
-
-      <!-- Modal
+        <!-- Modal
       <div class="modal fade" id="alumniModal" tabindex="-1" aria-labelledby="alumniModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
@@ -113,7 +80,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../public/js/script.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

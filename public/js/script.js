@@ -1,5 +1,5 @@
 // js/script.js
-
+console.log("script.js is called")
 const inputs = [
   'searchName', 'searchBatch', 'searchJob', 'searchLocation', 'searchBranch', 'searchCompany'
 ];
