@@ -38,7 +38,7 @@ const editProfile = async (req, res) => {
     try {
         data = req.body
         console.log(data)
-        const result = await db.query("UPDATE users SET email=$1, password=$2, name=$3, batch=$4, branch=$5, job_title=$6, location=$7 WHERE user_id = $8;", [data.email, data.password, data.name, data.batch, data.branch, data.job, data.location, req.session.user.user_id])
+        const result = await db.query("UPDATE users SET email=$1,  name=$2, batch=$3, branch=$4, job_title=$5, location=$6 WHERE user_id = $7;", [data.email, data.name, data.batch, data.branch, data.job, data.location, req.session.user.user_id])
         res.render('editProfile.ejs')
     } catch (error) {
         console.error('Error fetching directory:', error);
