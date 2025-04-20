@@ -1,7 +1,7 @@
 <main class="container alumni-container" id="alumniContainer">
     <% for (const user of users) {%>
         <div class="card">
-            <img src="https://randomuser.me/api/portraits/women/79.jpg" alt="Zoheen Shahzad" class="profile-pic">
+            <img src="<%=user.profile_image_url%>" alt="Zoheen Shahzad" class="profile-pic">
             <h3 class="name">
                 <%= user.name %>
             </h3>
