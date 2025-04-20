@@ -1,6 +1,6 @@
 const db = require('../db/database');
 
-const getProfile = async (req, res) => {
+const getProfileById = async (req, res) => {
     try {
         const id = parseInt(req.params.id);
         const userResult = await db.query("SELECT * FROM users WHERE user_id = $1", [id]);
@@ -9,7 +9,7 @@ const getProfile = async (req, res) => {
         const achievementsResult = await db.query("SELECT * FROM achievements WHERE user_id = $1", [id]);
         const userAchievements = achievementsResult.rows;
 
-        res.render('viewProfile.ejs', {
+        res.render('profileById.ejs', {
             user,
             achievements: userAchievements
         });
@@ -103,8 +103,16 @@ const filterDirectory = async (req, res) => {
     }
 };
 
+const getProfile = async (req, res) => {
+    const user_id = req.session.user.user_id
+    console.log(user_id)
+    // const result aw
+    res.render("viewFullProfile.ejs")
+}
+
 module.exports = {
     getProfile,
+    getProfileById,
     getDirectory,
     getEditProfile,
     editProfile,

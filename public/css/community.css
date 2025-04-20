@@ -3,6 +3,8 @@
 body {
   background: #f0f2f5;
   font-family: 'Segoe UI', sans-serif;
+  overflow: hidden; /* Prevent body scrolling */
+    height: 100vh;
 }
 
 .sidebar {
@@ -10,6 +12,8 @@ body {
   color: white;
   min-height: 100vh;
   padding-top: 30px;
+  height: 100%; /* Fill the height of parent */
+    overflow-y: hidden;
 }
 
 .sidebar .nav-link {
@@ -129,6 +133,8 @@ body {
   padding: 20px;
   position: relative;
   width: calc(100% - 240px);
+  overflow-y: auto; /* Only content area scrolls */
+    height: 100vh;
 }
 
 /* Post content in center */
