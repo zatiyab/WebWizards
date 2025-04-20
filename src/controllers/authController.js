@@ -22,11 +22,11 @@ const login = async (req, res) => {
 
 const signup = async (req, res) => {
     try {
-        const { email, password, name } = req.body;
+        const data = req.body;
         console.log("In auth controller")
-        console.log(email, password, name)
+        console.log(data.email, data.password, data.name)
         console.log(req.body)
-        const existingUser = await db.query("SELECT * FROM users WHERE email = $1", [email]);
+        const existingUser = await db.query("SELECT * FROM users WHERE email = $1", [data.email]);
 
         if (existingUser.rows.length > 0) {
             return res.redirect("/login");
@@ -34,7 +34,7 @@ const signup = async (req, res) => {
 
         await db.query(
             "INSERT INTO users (email, password,name) VALUES ($1, $2,$3)",
-            [email, password, name]
+            [data.email, data, password, data.name]
         );
         res.redirect("/dashboard");
     } catch (error) {
