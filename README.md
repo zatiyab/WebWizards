@@ -9,12 +9,12 @@
 
 ![Show Image](./public/css/screencapture-try-jyck-onrender-2025-04-20-09_58_27.jpg)
 
-![Show Image](./public/css/screencapture-try-jyck-onrender-achievements-2025-04-20-09_56_47.jpg)
-![Show Image](./public/css/screencapture-try-jyck-onrender-achievements-2025-04-20-09_57_03.jpg)
-![Show Image](./public/css/screencapture-try-jyck-onrender-dashboard-2025-04-20-09_49_54.jpg)
-![Show Image](./public/css/screencapture-try-jyck-onrender-directory-2025-04-20-09_50_14.jpg)
-![Show Image](./public/css/screencapture-try-jyck-onrender-edit-profile-2025-04-20-09_57_22.jpg)
-![Show Image](./public/css/Screenshot%202025-04-20%20095143.png)
+![Show Image](./public/images/screencapture-try-jyck-onrender-achievements-2025-04-20-09_56_47.jpg)
+![Show Image](./public/images/screencapture-try-jyck-onrender-achievements-2025-04-20-09_57_03.jpg)
+![Show Image](./public/images/screencapture-try-jyck-onrender-dashboard-2025-04-20-09_49_54.jpg)
+![Show Image](./public/images/screencapture-try-jyck-onrender-directory-2025-04-20-09_50_14.jpg)
+![Show Image](./public/images/screencapture-try-jyck-onrender-edit-profile-2025-04-20-09_57_22.jpg)
+![Show Image](./public/images/Screenshot%202025-04-20%20095143.png)
 
 A comprehensive platform that connects alumni, enabling networking, knowledge sharing, and community building.
 
