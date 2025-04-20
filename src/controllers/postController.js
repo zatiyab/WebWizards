@@ -40,15 +40,9 @@ const getDashboardPosts = async (req, res) => {
         const result = await db.query("SELECT * FROM posts,users WHERE posts.user_id = users.user_id");
         const posts_users = result.rows.reverse();
         const user_id = req.session.user.user_id;
-        let img;
-        let curr_user_data;
-        for (const post of posts_users) {
-            if (post.user_id === user_id) {
-                curr_user_data = post;
-                img = post.profile_image_url;
-                break
-            }
-        }
+        const result2 = await db.query("SELECT * FROM users WHERE user_id = $1", [user_id]);
+        curr_user_data = result2.rows
+
         const {
             name,
             batch,
