@@ -32,7 +32,7 @@ const getDashboardPosts = async (req, res) => {
     try {
         const result = await db.query("SELECT name,post FROM posts,users WHERE posts.user_id = users.user_id");
         const posts_users = result.rows.reverse();
-        const name = req.session.user.name;
+        const name = req.session.user.id;
         res.render("dashboard.ejs", { name, posts: posts_users });
     } catch (error) {
         console.error('Error fetching dashboard posts:', error);

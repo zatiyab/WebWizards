@@ -48,9 +48,64 @@ const editProfile = async (req, res) => {
 }
 
 
+const filterDirectory = async (req, res) => {
+    try {
+        const {
+            name,
+            batch,
+            job_title,
+            location,
+            branch,
+            company
+        } = req.query;
+
+        // Construct WHERE conditions and values
+        let conditions = [];
+        let values = [];
+        let i = 1; // placeholder index for $1, $2, etc.
+
+        if (name) {
+            conditions.push(`LOWER(name) LIKE LOWER($${i++})`);
+            values.push(`%${name}%`);
+        }
+        if (batch) {
+            conditions.push(`CAST(batch AS TEXT) LIKE $${i++}`);
+            values.push(`%${batch}%`);
+        }
+        if (job_title) {
+            conditions.push(`LOWER(job_title) LIKE LOWER($${i++})`);
+            values.push(`%${job_title}%`);
+        }
+        if (location) {
+            conditions.push(`LOWER(location) LIKE LOWER($${i++})`);
+            values.push(`%${location}%`);
+        }
+        if (branch) {
+            conditions.push(`LOWER(branch) LIKE LOWER($${i++})`);
+            values.push(`%${branch}%`);
+        }
+        if (company) {
+            conditions.push(`LOWER(company) LIKE LOWER($${i++})`);
+            values.push(`%${company}%`);
+        }
+
+        const whereClause = conditions.length > 0 ? `WHERE ${conditions.join(' AND ')}` : '';
+        const query = `SELECT * FROM alumni ${whereClause} ORDER BY name ASC`;
+
+        const result = await pool.query(query, values);
+        const users = result.rows;
+
+        res.render('alumni-cards', { users }); // partial to render filtered cards
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Server Error');
+    }
+};
+
 module.exports = {
     getProfile,
     getDirectory,
     getEditProfile,
-    editProfile
+    editProfile,
+    filterDirectory
 }; 
