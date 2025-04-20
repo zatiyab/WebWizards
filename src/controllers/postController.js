@@ -42,6 +42,7 @@ const getDashboardPosts = async (req, res) => {
         const user_id = req.session.user.user_id;
         const result2 = await db.query("SELECT * FROM users WHERE user_id = $1", [user_id]);
         curr_user_data = result2.rows
+        console.log(curr_user_data)
 
         const {
             name,
