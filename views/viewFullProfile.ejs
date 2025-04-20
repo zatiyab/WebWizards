@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlumniConnect - Zara Sheikh's Profile</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 220px;
+            background-color: #0066ff;
+            color: white;
+            padding: 20px 10px;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            padding-left: 10px;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .menu-item:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .menu-item.active {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .menu-item i {
+            margin-right: 10px;
+        }
+
+        .content {
+            flex: 1;
+            padding: 30px;
+        }
+
+        .profile-header {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .profile-basic {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #f0f0f0;
+            margin-right: 30px;
+        }
+
+        .profile-info h1 {
+            margin: 0 0 10px 0;
+            font-size: 28px;
+        }
+
+        .profile-tag {
+            display: inline-block;
+            background-color: #f0f0f0;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .profile-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background-color: #0066ff;
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: #e0e0e0;
+            color: #333;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-title {
+            font-size: 20px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #333;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .experience-item,
+        .education-item {
+            margin-bottom: 25px;
+        }
+
+        .experience-item:last-child,
+        .education-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .experience-header,
+        .education-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .experience-title,
+        .education-degree {
+            font-weight: 600;
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .experience-company,
+        .education-school {
+            font-size: 15px;
+            margin: 5px 0;
+        }
+
+        .experience-date,
+        .education-date {
+            color: #777;
+            font-size: 14px;
+        }
+
+        .experience-description,
+        .education-description {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background-color: #e8f0fe;
+            color: #0066ff;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .achievements-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .achievement-item {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 12px;
+            border-left: 4px solid #0066ff;
+        }
+
+        .achievement-title {
+            font-weight: 600;
+            margin: 0 0 5px 0;
+        }
+
+        .achievement-date {
+            color: #777;
+            font-size: 13px;
+        }
+
+        .action-buttons {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .action-buttons .btn {
+            padding: 10px 24px;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">AlumniConnect</div>
+            <div class="menu-item">
+                <i>🏠</i> Home
+            </div>
+            <div class="menu-item active">
+                <i>👥</i> Alumni Directory
+            </div>
+            <div class="menu-item">
+                <i>📱</i> Community Feed
+            </div>
+            <div class="menu-item">
+                <i>🏆</i> Achievements
+            </div>
+            <div class="menu-item">
+                <i>📅</i> Events
+            </div>
+            <div class="menu-item">
+                <i>💼</i> Job Board
+            </div>
+            <div class="menu-item">
+                <i>⚙️</i> Settings
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="profile-header">
+                <div class="profile-basic">
+                    <img src="/api/placeholder/150/150" alt="Zara Sheikh" class="profile-picture">
+                    <div class="profile-info">
+                        <h1>Zara Sheikh</h1>
+                        <div>
+                            <div class="profile-tag">Software Engineer</div>
+                            <div class="profile-tag">CSE 2023</div>
+                            <div class="profile-tag">Delhi</div>
+                        </div>
+                        <div class="profile-actions">
+                            <button class="btn btn-primary">Connect</button>
+                            <button class="btn btn-secondary">Message</button>
+                        </div>
+                    </div>
+                </div>
+
+                <p><strong>About Me:</strong> Software Engineer with a passion for AI and machine learning. Currently
+                    exploring GPT-5 model upgrades and interested in neural network architectures. Graduated from
+                    Computer Science Engineering in 2023. Looking to connect with fellow alumni working in AI research.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Work Experience</h2>
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3 class="experience-title">Software Engineer</h3>
+                        <span class="experience-date">January 2024 - Present</span>
+                    </div>
+                    <p class="experience-company">TechInnovate AI Solutions, Delhi</p>
+                    <p class="experience-description">Working on GPT model integration and optimization. Leading a team
+                        of 3 developers to implement AI solutions for enterprise clients. Developed natural language
+                        processing modules that improved query accuracy by 27%.</p>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3 class="experience-title">Software Development Intern</h3>
+                        <span class="experience-date">May 2023 - December 2023</span>
+                    </div>
+                    <p class="experience-company">DataTech Solutions, Gurugram</p>
+                    <p class="experience-description">Assisted in developing microservices architecture for data
+                        processing pipelines. Implemented unit tests that improved code coverage by 40%. Participated in
+                        daily scrum meetings and bi-weekly sprint planning.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Education</h2>
+                <div class="education-item">
+                    <div class="education-header">
+                        <h3 class="education-degree">B.Tech in Computer Science Engineering</h3>
+                        <span class="education-date">2019 - 2023</span>
+                    </div>
+                    <p class="education-school">Delhi Institute of Technology</p>
+                    <p class="education-description">CGPA: 3.8/4.0. Specialization in Artificial Intelligence and
+                        Machine Learning. Final year project: "Neural Network-based Traffic Prediction System" -
+                        received outstanding project award.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-container">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">TensorFlow</span>
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">Kubernetes</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">AWS</span>
+                    <span class="skill-tag">Machine Learning</span>
+                    <span class="skill-tag">Neural Networks</span>
+                    <span class="skill-tag">Natural Language Processing</span>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Achievements</h2>
+                <ul class="achievements-list">
+                    <li class="achievement-item">
+                        <div class="achievement-title">Attended NeurIPS 2025 in New Delhi</div>
+                        <div class="achievement-date">April 2025</div>
+                    </li>
+                    <li class="achievement-item">
+                        <div class="achievement-title">Excited to be working on GPT-5 model upgrades!</div>
+                        <div class="achievement-date">March 2025</div>
+                    </li>
+                    <li class="achievement-item">
+                        <div class="achievement-title">Published paper on "Efficient Training Methods for Large Language
+                            Models" in IEEE Transactions</div>
+                        <div class="achievement-date">November 2024</div>
+                    </li>
+                    <li class="achievement-item">
+                        <div class="achievement-title">Won 2nd place in TechHacks 2024 Hackathon</div>
+                        <div class="achievement-date">June 2024</div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Contact Information</h2>
+                <p><strong>Email:</strong> zara.sheikh@example.com</p>
+                <p><strong>LinkedIn:</strong> linkedin.com/in/zarasheikh</p>
+                <p><strong>GitHub:</strong> github.com/zarasheikh</p>
+                <p><strong>Twitter:</strong> @zara_sheikh_ai</p>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn btn-secondary">Back to Directory</button>
+                <button class="btn btn-primary">Edit Profile</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
