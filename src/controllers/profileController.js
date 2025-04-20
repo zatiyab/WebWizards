@@ -96,7 +96,7 @@ const filterDirectory = async (req, res) => {
         const result = await db.query(query, values);
         const users = result.rows;
 
-        res.render('.\\partials\\alumni-cards.ejs', { users }); // partial to render filtered cards
+        res.render('/partials/alumni-cards.ejs', { users }); // partial to render filtered cards
     } catch (err) {
         console.error(err);
         res.status(500).send('Server Error');
