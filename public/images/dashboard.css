@@ -24,8 +24,7 @@ body {
     margin-right: 10px;
 }
 
-.sidebar .nav-link:hover,
-.sidebar .nav-link.active {
+.sidebar .nav-link:hover {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 8px;
 }
