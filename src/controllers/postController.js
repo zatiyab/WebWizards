@@ -2,9 +2,16 @@ const db = require('../db/database');
 
 const getAllPosts = async (req, res) => {
     try {
+        const curr_user_id = req.session.user.user_id;
         const result = await db.query("SELECT * FROM posts,users WHERE posts.user_id = users.user_id");
         const posts_users = result.rows.reverse();
-        res.render("community-feed.ejs", { posts_users });
+        let curr_user_img;
+        for (const post of posts_users) {
+            if (post.user_id === curr_user_id) {
+                curr_user_img = post.profile_image_url
+            }
+        }
+        res.render("community-feed.ejs", { posts_users, curr_user_img: curr_user_img });
     } catch (error) {
         console.error('Error fetching posts:', error);
         res.status(500).send('Error fetching posts');
