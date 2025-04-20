@@ -36,7 +36,7 @@
                     <% posts_users.forEach((post)=>{%>
                         <div class="post">
                             <div class="post-header">
-                                <img src="./images/alumni-card-img.jpg" alt="User" class="post-user-img">
+                                <img src="<%= post.profile_image_url %>" alt="User" class="post-user-img">
                                 <div class="post-user-info">
                                     <div class="post-user-name">
                                         <%= post.name %>
