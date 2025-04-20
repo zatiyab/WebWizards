@@ -34,7 +34,7 @@ const signup = async (req, res) => {
 
         await db.query(
             "INSERT INTO users (email, password,name) VALUES ($1, $2,$3)",
-            [data.email, data, password, data.name]
+            [data.email, data.password, data.name]
         );
         res.redirect("/dashboard");
     } catch (error) {
