@@ -137,14 +137,15 @@ Project developed by WebWizard.
 ## 📞 Contact
 
 For questions or support, please contact us at
-**✨ Noor Islam ✨**
-* 📞 +91 9266863816
-* 📧 mdnoor8586@gmail.com
 
 **🌟 Ali Atiyab 🌟**
 * 📞 +91 9953228138
 * 📧 aliatiyab.husain@gmail.com
-
+  
+**✨ Noor Islam ✨**
+* 📞 +91 9266863816
+* 📧 mdnoor8586@gmail.com
+  
 **💫 Rihaan Khan 💫**
 * 📞 +91 92667 83386
 * 📧 rihaankhan2828@gmail.com 
